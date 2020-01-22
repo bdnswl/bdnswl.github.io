@@ -6,6 +6,7 @@ function getClasses() {
 		request.open('GET', 'https://cors-anywhere.herokuapp.com/https://portal.mcpsmd.org/guardian/home.html', true);
 		request.send(null)
 		console.log(request)
+	console.log(request.responseText)
 	var id = request.responseText.split("root.guardianId = '")[1].split("';")[0]
 	console.log(id)
 	var request = new XMLHttpRequest();
