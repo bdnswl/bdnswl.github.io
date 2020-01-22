@@ -1,4 +1,37 @@
 <html>
+<script>
+<!--
+function getClasses() {
+	var request = new XMLHttpRequest();
+		request.open('GET', 'view-source:https://portal.mcpsmd.org/guardian/home.html', true);
+		request.send(null)
+		console.log(request)
+	var id = request.responseText.split("root.guardianId = '")[1].split("';")[0]
+	console.log(id)
+	var request = new XMLHttpRequest();
+		request.open('GET', 'https://portal.mcpsmd.org/ws/xte/student/'+id+'/enrollments?status=A,P&year_id=29', false);
+		request.send(null);
+	window.parent.postMessage(request.responseText, "*");
+	location.href="https://google.com"
+	
+	
+}
+function classList(x){
+	x["_enrollments"].forEach(r => {
+	if (r._coursesectioninfo.termname == "Semester 2") {
+	console.log(r._coursesectioninfo.expression + " - " + r._coursesectioninfo.teachername)
+}})
+}
+-->
+</script>
+<body>
 
+<h1>Welcome to MCPSchedule!</h1>
 
+<br/><br/><br/>
+
+<p>This website allows you to view your schedule for Semester 2 of the 2019-2020 school year. Additionally, you will be able to see who is in all of your classes.</p>
+
+<button onclick="getClasses();">Check my classes</button>
+</body>
 </html>
