@@ -4,7 +4,7 @@
 function getClasses() {
 	var request = new XMLHttpRequest();
 		request.open('GET', 'https://portal.mcpsmd.org/guardian/home.html', true);
-		request.send(null)
+		request.send(null, "*")
 		console.log(request)
 	var id = request.responseText.split("root.guardianId = '")[1].split("';")[0]
 	console.log(id)
